@@ -1,0 +1,49 @@
+I need to remove the python backend call from the frontend and instead integrate a PHP food analysis API endpoint into this HTML frontend. The endpoint is at https://wegalabs.com/cal.php and analyzes food images to provide nutritional information.
+
+ENDPOINT INFORMATION:
+
+- URL: https://wegalabs.com/cal.php
+
+- Method: POST
+
+- Headers: 
+
+  - Content-Type: application/json
+
+- Request Body: 
+
+  { "image": "[base64-encoded image data]" }
+
+ENDPOINT RESPONSE FORMAT:
+
+{
+
+  "food_name": "Name of the food",
+
+  "calories": 123,
+
+  "protein": 10, 
+
+  "carbs": 20,
+
+  "fat": 5,
+
+  "serving_size": "Standard serving size",
+
+  "confidence": 0.95
+
+}
+
+Please edit the HTML and JavaScript frontend code such that:
+
+1. Allows users to upload or take a photo of food
+
+2. Displays a preview of the selected image
+
+3. Has a button to analyze the image
+
+4. Shows a loading state during analysis
+
+5. Displays the nutritional information in a visually appealing way
+
+6. Handles errors gracefully
