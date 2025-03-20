@@ -14,7 +14,7 @@ Here is some relevant documentation from the Grok's API docs:
 
 "
 
-curl https://api.x.ai/v1/chat/completions -H "Content-Type: application/json" -H "Authorization: Bearer xai-XUxgiFh6cwZv98K0R4Ixn9KMgrRnBGfBTL7hrEK74QsGwAOGvx0h8JSraQMUWRmLKiPioU5FAcPU5Efn" -d '{
+curl https://api.x.ai/v1/chat/completions -H "Content-Type: application/json" -H "Authorization: Bearer [API KEY HERE]" -d '{
 
   "messages": [
 
