@@ -1,0 +1,97 @@
+I am creating a web-app to analyze and track calories and other nutrient info of food I eat.
+
+I have an empty project with two files:
+
+1. app.html
+
+2. handler.py
+
+The file app.html is where we will have an interface where users will be able to upload a picture of food items and then will have a button to submit the uploaded picture. 
+
+Then this image will be sent to my second file handler.py which will send it to an LLM. xAI's Grok for this case and then ask the LLM to respond with what the food in the image is and what calories and other nutrients it might have. Then this data will be sent to app.html to display to the user.
+
+Here is some relevant documentation from the Grok's API docs:
+
+"
+
+curl https://api.x.ai/v1/chat/completions -H "Content-Type: application/json" -H "Authorization: Bearer xai-XUxgiFh6cwZv98K0R4Ixn9KMgrRnBGfBTL7hrEK74QsGwAOGvx0h8JSraQMUWRmLKiPioU5FAcPU5Efn" -d '{
+
+  "messages": [
+
+    {
+
+      "role": "system",
+
+      "content": "You are a test assistant."
+
+    },
+
+    {
+
+      "role": "user",
+
+      "content": "Testing. Just say hi and hello world and nothing else."
+
+    }
+
+  ],
+
+  "model": "grok-2-latest",
+
+  "stream": false,
+
+  "temperature": 0
+
+}'
+
+"
+
+"
+
+[
+
+    {
+
+        "role": "user",
+
+        "content": [
+
+            {
+
+                "type": "image_url",
+
+                "image_url": {
+
+                    "url": "data:image/jpeg;base64,<base64_image_string>",
+
+                    "detail": "high",
+
+                },
+
+            },
+
+            {
+
+                "type": "text",
+
+                "text": "What is in this image ?",
+
+            },
+
+        ],
+
+    }
+
+]
+
+"
+
+The goal of this web-app is to make a simple v1, and we do not want to worry about auth or user management or even databases. So store the food data in browser storage. It is fine if the data gets lost every time the user reloads the page.
+
+I do not have any web frameworks installed. So make sure that the code for app.html is html + js and you should use tailwind via CDN. 
+
+Add proper error logging, and show all the errors as pop-ups on the front end. 
+
+Give me both the files app.html and handler.py as two separate artifacts. 
+
+Do not assume anything. Ask for any additional data if you need. Ask any questions if you think knowing answers to those questions will help you help me better.
