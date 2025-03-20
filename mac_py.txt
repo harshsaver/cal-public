@@ -1,5 +1,20 @@
-1. /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-2. brew install python
-3. python3 --version
-4. pip install flask==2.2.3 werkzeug==2.2.3 flask-cors==3.0.10 requests==2.28.2 python-dotenv==1.0.0
-5. python -m http.server 8000
+# 1. Install Homebrew (package manager)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# 2. Install Python using Homebrew
+brew install python
+
+# 3. Check the Python version installed
+python3 --version
+
+# 4. Create a virtual environment (named "myenv")
+python3 -m venv myenv
+
+# 5. Activate your virtual environment
+source myenv/bin/activate
+
+# 6. Install the necessary Python packages
+pip install flask==2.2.3 werkzeug==2.2.3 flask-cors==3.0.10 requests==2.28.2 python-dotenv==1.0.0
+
+# 7. Run a simple HTTP server to test (optional, basic server)
+python -m http.server 8000
